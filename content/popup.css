@@ -1,0 +1,74 @@
+/* content/popup.css */
+
+.gpt4-popup {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 350px;
+  max-width: 90%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-20px);
+}
+
+.gpt4-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gpt4-content {
+  position: relative;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.gpt4-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.gpt4-close-button:hover {
+  color: #555;
+}
+
+.gpt4-copy-button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.gpt4-copy-button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.gpt4-content p {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap; /* Preserve line breaks */
+}
